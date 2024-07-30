@@ -12,7 +12,7 @@ on:
       - 'package.json'
 
 jobs:
-  PublishWolfStar:
+  PublishCDNWolfStarRocks:
     name: Publish WolfStar image to container registries
     runs-on: ubuntu-latest
     steps:
@@ -31,4 +31,4 @@ jobs:
         with:
           push: true
           context: .
-          tags: ghcr.io/wolfstar-project/wolfstar:latest
+          tags: ghcr.io/wolfstar-project/cdn.wolfstar.rocks:latest
