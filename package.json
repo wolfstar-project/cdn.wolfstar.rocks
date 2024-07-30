@@ -5,23 +5,23 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "astro dev",
+		"dev": "bunx --bun astro dev",
 		"start": "bun run ./dist/server/entry.mjs",
-		"build": "astro check && astro build",
-		"preview": "astro preview",
-		"astro": "astro",
+		"build": "bunx --bun astro check && bunx --bun astro build",
+		"preview": "bunx --bun astro preview",
+		"astro": "bunx --bun astro",
 		"lint": "eslint --fix ",
 		"format": "prettier --write --log-level=warn \"{src}/**/*\"",
-		"prepare": "husky"
+		"prepare": "husky || true"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.8.3",
+		"@astrojs/node": "^8.3.2",
 		"@astrojs/sitemap": "^3.1.6",
 		"@astrojs/ts-plugin": "^1.9.0",
 		"@aws-sdk/client-s3": "^3.620.1",
-		"@nurodev/astro-bun": "^1.1.3",
-		"astro": "^4.12.2",
-		"@sapphire/prettier-config": "^2.0.0"
+		"@sapphire/prettier-config": "^2.0.0",
+		"astro": "^4.12.2"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^19.3.0",

@@ -9,6 +9,8 @@ interface ImportMetaEnv {
 	readonly QUALITY: number;
 	readonly TTL: number;
 	readonly SECRET_KEY: string;
+	readonly HOST: string;
+	readonly PORT: number;
 }
 
 interface ImportMeta {
