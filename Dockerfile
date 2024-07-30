@@ -17,7 +17,7 @@ COPY --chown=bun:bun tsconfig.json tsconfig.json
 COPY --chown=bun:bun src/ src/
 COPY --chown=bun:bun public/ public/
 COPY --chown=bun:bun astro.config.mjs .
-RUN bun install --production --frozen-lockfile
+RUN bun install --frozen-lockfile
 RUN bun run build
 
 # ================ #
