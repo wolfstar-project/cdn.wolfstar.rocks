@@ -1,0 +1,47 @@
+# Version control
+.git
+.gitignore
+
+# Docker configuration files
+Dockerfile
+.dockerignore
+
+# Dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+bun-debug.log
+
+# Documentation files
+README.md
+CHANGELOG.md
+LICENSE
+
+# Astro build and cache directories
+dist
+.astro
+
+# TypeScript cache and build files
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Other development files and directories
+.vscode
+.idea
+*.log
+*.bak
+*.swp
+*.tmp
+
+# Test files
+__tests__
+*.test.js
+*.spec.js
+
+# System files
+.DS_Store
+Thumbs.db

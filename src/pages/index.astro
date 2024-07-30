@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const apiEndpoints = [
+  { name: "Get Image", path: "/:key", method: "GET" },
+  { name: "Upload/Update Image", path: "/api/upsert/:key", method: "POST" },
+  { name: "Get Image Info", path: "/api/info/:key", method: "GET" },
+  { name: "Delete Image", path: "/api/delete/:key", method: "DELETE" },
+];
+---
+
+<Layout title="CDN Image Processor">
+  <main>
+    <h1>Welcome to <span class="text-gradient">CDN Image Processor</span></h1>
+    <p class="instructions">
+      This service allows you to <strong
+        >store, retrieve, and process images</strong
+      > on the fly. Use the API endpoints below to interact with the CDN.
+    </p>
+    <ul role="list" class="link-card-grid">
+      {
+        apiEndpoints.map((endpoint) => (
+          <li class="link-card">
+            <h2>{endpoint.name}</h2>
+            <p>
+              <strong>Path:</strong> {endpoint.path}
+            </p>
+            <p>
+              <strong>Method:</strong> {endpoint.method}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="instructions">
+      <h2>Quick Start:</h2>
+      <p>To retrieve and process an image, use:</p>
+      <code>GET /:key?width=300&height=200&quality=80</code>
+      <p>For API operations, include token and salt:</p>
+      <code>POST /api/upsert/:key?token=your_token&salt=your_salt</code>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+  }
+  .link-card {
+    padding: 1rem;
+    background-color: rgba(var(--accent-light), 8%);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  .link-card:hover {
+    background-color: rgba(var(--accent-light), 12%);
+  }
+  .link-card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-card p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+</style>
