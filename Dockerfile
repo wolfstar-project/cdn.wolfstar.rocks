@@ -26,7 +26,7 @@ RUN bun run build
 FROM base AS runner
 ENV NODE_ENV="production"
 COPY --chown=bun:bun --from=builder /usr/src/app/dist dist
-COPY --chown=bun:bun src/.env src/.env
+COPY --chown=bun:bun src/.env.example src/.env
 
 USER bun
 EXPOSE ${PORT}
