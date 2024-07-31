@@ -15,14 +15,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Add problem matchers
         run: echo "::add-matcher::.github/problemMatchers/eslint.json"
-      - name: Use Bun
-        uses: oven-sh/setup-bun@v2
+      - name: Use Node.js v20
+        uses: actions/setup-node@v4
         with:
-          bun-version: 1.1.21
+          node-version: 20
+          cache: yarn
       - name: Install Dependencies
-        run: bun install --frozen-lockfile
+        run: yarn --immutable
       - name: Run ESLint
-        run: bun lint --fix=false
+        run: yarn lint --fix=false
 
   Building:
     name: Building NodeJS
@@ -32,11 +33,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Add problem matchers
         run: echo "::add-matcher::.github/problemMatchers/tsc.json"
-      - name: Use Bun
-        uses: oven-sh/setup-bun@v2
+      - name: Use Node.js v20
+        uses: actions/setup-node@v4
         with:
-          bun-version: 1.1.21
+          node-version: 20
+          cache: yarn
       - name: Install Dependencies
-        run: bun install --frozen-lockfile
+        run: yarn --immutable
       - name: Build code
-        run: bun build
+        run: yarn build

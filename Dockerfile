@@ -1,34 +1,56 @@
 # ================ #
 #    Base Stage    #
 # ================ #
-FROM oven/bun:latest AS base
+
+FROM node:20-alpine as base
+
 WORKDIR /usr/src/app
+
+ENV YARN_DISABLE_GIT_HOOKS=1
 ENV CI=true
-ENV HUSKY=0
-COPY --chown=bun:bun bun.lockb .
-COPY --chown=bun:bun package.json .
+
+RUN apk add --no-cache dumb-init python3 g++ make
+
+COPY --chown=node:node yarn.lock .
+COPY --chown=node:node package.json .
+COPY --chown=node:node .yarnrc.yml .
+COPY --chown=node:node .yarn/ .yarn/
+
+ENTRYPOINT ["dumb-init", "--"]
 
 # ================ #
 #   Builder Stage  #
 # ================ #
-FROM base AS builder
+
+FROM base as builder
+
 ENV NODE_ENV="development"
-COPY --chown=bun:bun tsconfig.json tsconfig.json
-COPY --chown=bun:bun src/ src/
-COPY --chown=bun:bun public/ public/
-COPY --chown=bun:bun astro.config.mjs .
-RUN bun install --frozen-lockfile
-RUN bun run build
+
+COPY --chown=node:node tsconfig.json tsconfig.json
+COPY --chown=node:node src/ src/
+COPY --chown=node:node astro.config.mjs .
+COPY --chown=node:node public/ public/
+
+RUN yarn install --immutable
+RUN yarn run build
 
 # ================ #
 #   Runner Stage   #
 # ================ #
-FROM base AS runner
-ENV NODE_ENV="production"
-COPY --chown=bun:bun --from=builder /usr/src/app/dist dist
-COPY --chown=bun:bun src/.env.example src/.env
 
-USER bun
+FROM base AS runner
+
+ENV NODE_ENV="production"
+ENV NODE_OPTIONS="--enable-source-maps --max_old_space_size=4096"
+
+COPY --chown=node:node --from=builder /usr/src/app/dist dist
+
+COPY --chown=node:node src/.env.example src/.env
+
+RUN yarn workspaces focus --all --production
+RUN chown node:node /usr/src/app/
+
+USER node
 EXPOSE ${PORT}
 
-CMD [ "bun", "run", "start" ]
+CMD [ "yarn", "run", "start" ]

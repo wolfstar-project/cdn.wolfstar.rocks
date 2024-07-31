@@ -1,18 +1,19 @@
 {
 	"name": "cdn.wolfstar.rocks",
-	"author": "WolfStar Project",
-	"description": "CDN is a content delivery network that is optimized for delivering content to users with high availability and high performance.",
-	"type": "module",
 	"version": "0.0.1",
+	"description": "CDN is a content delivery network that is optimized for delivering content to users with high availability and high performance.",
+	"author": "WolfStar Project",
+	"license": "Apache-2.0",
+	"type": "module",
 	"scripts": {
-		"dev": "bunx --bun astro dev",
-		"start": "bun run ./dist/server/entry.mjs",
-		"build": "bunx --bun astro check && bunx --bun astro build",
-		"preview": "bunx --bun astro preview",
-		"astro": "bunx --bun astro",
+		"dev": "astro dev",
+		"start": "node ./dist/server/entry.mjs",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
 		"lint": "eslint --fix ",
 		"format": "prettier --write --log-level=warn \"{src}/**/*\"",
-		"prepare": "husky || true"
+		"update": "yarn upgrade-interactive"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.8.3",
@@ -26,17 +27,24 @@
 	"devDependencies": {
 		"@commitlint/cli": "^19.3.0",
 		"@commitlint/config-conventional": "^19.2.2",
-		"@types/bun": "^1.1.6",
+		"@types/node": "^22.0.0",
 		"@typescript-eslint/parser": "^7.18.0",
+		"@typescript-eslint/eslint-plugin": "7.18.0",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^9.8.0",
 		"eslint-plugin-astro": "^1.2.3",
-		"husky": "^9.1.4",
 		"lint-staged": "^15.2.7",
 		"prettier": "^3.3.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"pretty-quick": "^4.0.0",
 		"typescript": "^5.5.4"
+	},
+	"resolutions": {
+		"@types/node": "20.11.5"
+	},
+	"engines": {
+		"node": "^20",
+		"npm": "^10.0.0"
 	},
 	"lint-staged": {
 		"*.{mjs,js,ts}": "eslint --fix"
@@ -58,5 +66,9 @@
 	"bugs": {
 		"url": "https://github.com/wolfstar-project/cdn.wolfstar.rocks/issues"
 	},
-	"prettier": "@sapphire/prettier-config"
+	"prettier": "@sapphire/prettier-config",
+	"packageManager": "yarn@4.3.1",
+	"volta": {
+		"node": "20.16.0"
+	}
 }
