@@ -15,11 +15,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/check@npm:^0.8.3":
-  version: 0.8.3
-  resolution: "@astrojs/check@npm:0.8.3"
+"@astrojs/check@npm:^0.9.1":
+  version: 0.9.1
+  resolution: "@astrojs/check@npm:0.9.1"
   dependencies:
-    "@astrojs/language-server": "npm:^2.12.7"
+    "@astrojs/language-server": "npm:^2.13.1"
     chokidar: "npm:^3.5.3"
     fast-glob: "npm:^3.3.1"
     kleur: "npm:^4.1.5"
@@ -28,14 +28,14 @@ __metadata:
     typescript: ^5.0.0
   bin:
     astro-check: dist/bin.js
-  checksum: 10/787300c3c30fffee3c15719f6ce7d517f1ce0c9b563372abe61b6f5adf5954db16832bcce86f8cb52ef2e640c185c9be61fb7f7fa011d5144aeaabf71f05dec4
+  checksum: 10/030e12a8ada28e5e2139dbc9d96d1321926c48a28c2ad438d1329127016396caa362d3b14f2ce871a3d0b36ca1e07ff75d0ecb1a995c8f69423eed795a06d7bd
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^2.0.0, @astrojs/compiler@npm:^2.10.0, @astrojs/compiler@npm:^2.7.0, @astrojs/compiler@npm:^2.9.1, @astrojs/compiler@npm:^2.9.2":
-  version: 2.10.0
-  resolution: "@astrojs/compiler@npm:2.10.0"
-  checksum: 10/276a71858b003b23c003e6002b95b445a469a706b6d179d265535e7c0afda9c199a77fee61e9080fb7c161b13c34ef3ff6b52e41e1bd2fd2692899f2cc8424a2
+"@astrojs/compiler@npm:^2.0.0, @astrojs/compiler@npm:^2.10.1, @astrojs/compiler@npm:^2.9.1, @astrojs/compiler@npm:^2.9.2":
+  version: 2.10.1
+  resolution: "@astrojs/compiler@npm:2.10.1"
+  checksum: 10/ccb75305b0e1b8b77f4e152905de6b8c3d038f07fb5a84caf3c4d37a4e716952ef319803f6e6b483391b4b3fc0624dad0520f9eeeb2f9775080aa7fb93ef8321
   languageName: node
   linkType: hard
 
@@ -46,11 +46,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/language-server@npm:^2.12.7":
-  version: 2.13.0
-  resolution: "@astrojs/language-server@npm:2.13.0"
+"@astrojs/language-server@npm:^2.13.1":
+  version: 2.13.1
+  resolution: "@astrojs/language-server@npm:2.13.1"
   dependencies:
-    "@astrojs/compiler": "npm:^2.10.0"
+    "@astrojs/compiler": "npm:^2.10.1"
     "@jridgewell/sourcemap-codec": "npm:^1.4.15"
     "@volar/kit": "npm:~2.4.0-alpha.15"
     "@volar/language-core": "npm:~2.4.0-alpha.15"
@@ -77,7 +77,7 @@ __metadata:
       optional: true
   bin:
     astro-ls: bin/nodeServer.js
-  checksum: 10/fadd4d66fc6cdfbe24cb2995ad46730d539b4bcb6139add17f634cb8dbcb8190a3c555fb436ed797df1b4762360bb95bf7ac3e801e775d86085a0b052eb43ec7
+  checksum: 10/3bd4d5c790b6fafa2dc344ffcd44e9e79f6262b2b25e8900fb65a0aeda60628a5f7472a2179649349b021cb3eafa1e249edd32f2812ae821f50afabc9e435ef4
   languageName: node
   linkType: hard
 
@@ -154,17 +154,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/ts-plugin@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "@astrojs/ts-plugin@npm:1.9.0"
+"@astrojs/ts-plugin@npm:^1.9.1":
+  version: 1.9.1
+  resolution: "@astrojs/ts-plugin@npm:1.9.1"
   dependencies:
-    "@astrojs/compiler": "npm:^2.7.0"
+    "@astrojs/compiler": "npm:^2.10.1"
     "@jridgewell/sourcemap-codec": "npm:^1.4.15"
     "@volar/language-core": "npm:~2.4.0-alpha.15"
     "@volar/typescript": "npm:~2.4.0-alpha.15"
     semver: "npm:^7.3.8"
     vscode-languageserver-textdocument: "npm:^1.0.11"
-  checksum: 10/a0681d36b8cbd9e82edfc5ca30e15048e4cea17027126261c7f4abb20290a0a60656a00147577e11eadd62cb027f9b87faae3e3562650fbcb50d192d7c5e5236
+  checksum: 10/ca41968a96da5f0bbbfdf05744e5a941e1a5c0a9b806a290b3d297fa780430a3f8cb5915105fa7ef4b2b2085152797d87394769e5de23b10620fb2946c5b4a48
   languageName: node
   linkType: hard
 
@@ -250,7 +250,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-s3@npm:^3.620.1":
+"@aws-sdk/client-s3@npm:^3.621.0":
   version: 3.621.0
   resolution: "@aws-sdk/client-s3@npm:3.621.0"
   dependencies:
@@ -2708,12 +2708,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.11.5":
-  version: 20.11.5
-  resolution: "@types/node@npm:20.11.5"
+"@types/node@npm:^22.0.1":
+  version: 22.0.1
+  resolution: "@types/node@npm:22.0.1"
   dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 10/9f31c471047d7b3e240ce7b77ff29b0d15e83be7e3feafb3d0b0d0931122b438b1eefa302a5a2e1e9849914ff3fd76aafbd8ccb372efb1331ba048da63bce6f8
+    undici-types: "npm:~6.11.1"
+  checksum: 10/fa753b7f0888457d7f6a3ec9ceb7ceb70fc62d510af4ea345484a16824f0e74b0d48d9a48a576795f13514c33de5f873fd4cea10527f60b808eff9770d7478ea
   languageName: node
   linkType: hard
 
@@ -3190,7 +3190,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^4.12.2":
+"astro@npm:^4.12.3":
   version: 4.12.3
   resolution: "astro@npm:4.12.3"
   dependencies:
@@ -3471,18 +3471,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cdn.wolfstar.rocks@workspace:."
   dependencies:
-    "@astrojs/check": "npm:^0.8.3"
+    "@astrojs/check": "npm:^0.9.1"
     "@astrojs/node": "npm:^8.3.2"
     "@astrojs/sitemap": "npm:^3.1.6"
-    "@astrojs/ts-plugin": "npm:^1.9.0"
-    "@aws-sdk/client-s3": "npm:^3.620.1"
+    "@astrojs/ts-plugin": "npm:^1.9.1"
+    "@aws-sdk/client-s3": "npm:^3.621.0"
     "@commitlint/cli": "npm:^19.3.0"
     "@commitlint/config-conventional": "npm:^19.2.2"
     "@sapphire/prettier-config": "npm:^2.0.0"
-    "@types/node": "npm:^22.0.0"
+    "@types/node": "npm:^22.0.1"
     "@typescript-eslint/eslint-plugin": "npm:7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
-    astro: "npm:^4.12.2"
+    astro: "npm:^4.12.3"
     cz-conventional-changelog: "npm:^3.3.0"
     eslint: "npm:^9.8.0"
     eslint-plugin-astro: "npm:^1.2.3"
@@ -8428,10 +8428,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~5.26.4":
-  version: 5.26.5
-  resolution: "undici-types@npm:5.26.5"
-  checksum: 10/0097779d94bc0fd26f0418b3a05472410408877279141ded2bd449167be1aed7ea5b76f756562cb3586a07f251b90799bab22d9019ceba49c037c76445f7cddd
+"undici-types@npm:~6.11.1":
+  version: 6.11.1
+  resolution: "undici-types@npm:6.11.1"
+  checksum: 10/bdee4c3d67626bf45f1502b817b96e328ff9c3c006ecafa3708bc39ba66d6cecc2d5d69d3148667bb833d3fb457c0e715bfeed0b7b6767fa4d3044f5c1036ba9
   languageName: node
   linkType: hard
 
