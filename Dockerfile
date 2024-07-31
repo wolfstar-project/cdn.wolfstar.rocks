@@ -53,4 +53,4 @@ RUN chown node:node /usr/src/app/
 USER node
 EXPOSE ${PORT}
 
-CMD [ "yarn", "run", "start" ]
+CMD ["node", "./dist/server/entry.mjs"]
