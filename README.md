@@ -35,21 +35,21 @@ To run the CDN locally:
 2. Copy the `.env.example` file and rename it to `.env`
 3. Fill in the environment variables in the `.env` file. Here's an example of the required variables:
 
-   ```
-   S3_ENDPOINT=''
-   S3_REGION='' 
-   S3_BUCKET=''
+    ```
+    S3_ENDPOINT=''
+    S3_REGION=''
+    S3_BUCKET=''
 
-   AWS_ACCESS_KEY_ID=''
-   AWS_SECRET_ACCESS_KEY=''
+    AWS_ACCESS_KEY_ID=''
+    AWS_SECRET_ACCESS_KEY=''
 
-   QUALITY=80
-   SECRET_KEY=''
+    QUALITY=80
+    SECRET_KEY=''
 
-   # Hostname and Ports
-   PORT=3000
-   HOST='localhost'
-   ```
+    # Hostname and Ports
+    PORT=3000
+    HOST='localhost'
+    ```
 
 4. Install dependencies with `yarn`
 5. Run `yarn dev` to start the Astro development server
@@ -58,20 +58,20 @@ To run the CDN locally:
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `yarn`                 | Installs dependencies                              |
-| `yarn dev`             | Starts local dev server at `localhost:3000`        |
-| `yarn build`           | Build your production site to `./dist/`            |
-| `yarn preview`         | Preview your build locally, before deploying       |
-| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check`   |
+| Command          | Action                                           |
+| :--------------- | :----------------------------------------------- |
+| `yarn`           | Installs dependencies                            |
+| `yarn dev`       | Starts local dev server at `localhost:3000`      |
+| `yarn build`     | Build your production site to `./dist/`          |
+| `yarn preview`   | Preview your build locally, before deploying     |
+| `yarn astro ...` | Run CLI commands like `astro add`, `astro check` |
 
 ## Links
 
 **WolfStar Links**
 
-- [WolfStar Invite Link](https://invite.wolfstar.rocks)
-- [Support Server](https://join.wolfstar.rocks)
+-   [WolfStar Invite Link](https://invite.wolfstar.rocks)
+-   [Support Server](https://join.wolfstar.rocks)
 
 ## Contributors
 
@@ -79,8 +79,8 @@ Please make sure to read the [Contributing Guide][contributing] before making a 
 
 Thank you to all the people who have already contributed to the WolfStar Project!
 
-<a href="https://github.com/wolfstar-project/wolfstar.rocks/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=wolfstar-project/wolfstar.rocks" />
+<a href="https://github.com/wolfstar-project/cdn.wolfstar.rocks/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wolfstar-project/cdn.wolfstar.rocks" />
 </a>
 
 [contributing]: https://github.com/wolfstar-project/.github/blob/main/.github/CONTRIBUTING.md
@@ -92,9 +92,9 @@ may still want to donate just to show their appreciation. Thank you very much in
 
 We accept donations through Patreon, BitCoin, Ethereum, and Litecoin. You can use the buttons below to donate through your method of choice.
 
-| Donate With |         QR         |                        Address                         |
-| :---------: | :----------------: | :----------------------------------------------------: |
-|   Ko-fi   | ![KoFiImage][]  |                 [Click Here][kofi]                        |
+| Donate With |       QR       |      Address       |
+| :---------: | :------------: | :----------------: |
+|    Ko-fi    | ![KoFiImage][] | [Click Here][kofi] |
 
 [KoFiImage]: https://cdn.wolfstar.rocks/gh-assets/ko-fi.png
 [kofi]: https://donate.wolfstar.rocks/ko-fi
